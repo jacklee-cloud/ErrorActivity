@@ -17,14 +17,18 @@ public class FirstActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
-        Button button1=(Button) findViewById(R.id.button_1);
+        Button button1=(Button)findViewById(R.id.Button_1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(FirstActivity.this,"登陆成功！",
+                        Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main,menu);
